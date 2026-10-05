@@ -1,0 +1,5 @@
+.DS_Store
+__pycache__/
+
+# made by export_tags.sh. dist/ is the tracked release bundle
+exports/
