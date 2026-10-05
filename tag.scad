@@ -1,4 +1,5 @@
-// scad-tag - a parametric name tag. drop in your own svg, type a name, get a 3mf.
+// glg-nametag - staff name tag for great lakes gaming. a fork of scad-tag with the glg logo,
+// din pro medium, all caps and purple and white set as the defaults.
 // 100 x 25 mm plate by default, 2 mm base, 1 mm rim, logo + name + title raised 1 mm.
 //
 // use it (openscad 2021.01 or newer):
@@ -16,11 +17,11 @@ include <fonts.scad>
 
 /* [Text] */
 // Big name line
-name = "Your Name";
+name = "Alex";
 // Smaller line under the name. Leave blank for a name-only tag.
-title = "Your Title";
+title = "Lounge Associate";
 // Force everything to CAPITALS
-all_caps = false;
+all_caps = true;
 
 /* [Batch Mode (many tags on one plate)] */
 batch_mode = false;
@@ -32,9 +33,9 @@ batch_columns = 2;
 batch_gap = 4;
 
 /* [Font] */
-// Comic Sans comes with macOS and Windows. On Linux, use Comic Neue (bundled, free) instead.
-name_font = "Comic Sans MS:style=Bold"; // [Comic Sans MS:style=Bold, Comic Sans MS:style=Regular, Comic Neue:style=Bold, Barlow Semi Condensed Medium, Barlow Semi Condensed SemiBold, DIN Pro:style=Medium, Liberation Sans:style=Bold, Arial:style=Bold, Impact:style=Regular, Verdana:style=Bold, Trebuchet MS:style=Bold, Georgia:style=Bold, Times New Roman:style=Bold, Courier New:style=Bold, Custom]
-title_font = "Comic Sans MS:style=Bold"; // [Comic Sans MS:style=Bold, Comic Sans MS:style=Regular, Comic Neue:style=Bold, Barlow Semi Condensed Medium, Barlow Semi Condensed SemiBold, DIN Pro:style=Medium, Liberation Sans:style=Bold, Arial:style=Bold, Impact:style=Regular, Verdana:style=Bold, Trebuchet MS:style=Bold, Georgia:style=Bold, Times New Roman:style=Bold, Courier New:style=Bold, Custom]
+// DIN Pro is a paid font. If it isnt installed, pick Barlow Semi Condensed (bundled, free).
+name_font = "DIN Pro:style=Medium"; // [Comic Sans MS:style=Bold, Comic Sans MS:style=Regular, Comic Neue:style=Bold, Barlow Semi Condensed Medium, Barlow Semi Condensed SemiBold, DIN Pro:style=Medium, Liberation Sans:style=Bold, Arial:style=Bold, Impact:style=Regular, Verdana:style=Bold, Trebuchet MS:style=Bold, Georgia:style=Bold, Times New Roman:style=Bold, Courier New:style=Bold, Custom]
+title_font = "DIN Pro:style=Medium"; // [Comic Sans MS:style=Bold, Comic Sans MS:style=Regular, Comic Neue:style=Bold, Barlow Semi Condensed Medium, Barlow Semi Condensed SemiBold, DIN Pro:style=Medium, Liberation Sans:style=Bold, Arial:style=Bold, Impact:style=Regular, Verdana:style=Bold, Trebuchet MS:style=Bold, Georgia:style=Bold, Times New Roman:style=Bold, Courier New:style=Bold, Custom]
 // Any installed font, used when a font above is set to Custom. Exact name from help > font list.
 custom_font = "Futura:style=Bold";
 // Custom font not in fonts.scad: how wide it runs compared to Arial Bold (1 = same)
@@ -65,16 +66,16 @@ auto_shrink_to_fit = true;
 
 /* [Logo] */
 // Your svg, in the same folder as this file. Leave blank for a text-only tag.
-logo_file = "";
+logo_file = "glg_logo.svg";
 // Width / height of your svg. python3 tools/svg_aspect.py your.svg prints it.
-logo_aspect = 1.0;
+logo_aspect = 1.339;
 // Logo height on the tag (mm)
 logo_height = 18;
 logo_side = "left"; // [left, right]
 // Distance from the inside of the rim to the logo (mm)
 logo_margin = 2;
 // Space between the logo and the text (mm)
-logo_text_gap = 3;
+logo_text_gap = 5;
 // Nudge logo up/down (mm)
 logo_offset_y = 0;
 // Fatten thin bits of the logo for printing (mm, 0 = off, try 0.1-0.2)
@@ -108,8 +109,8 @@ pin_depth = 0.8;
 // Base and raised separately for two colors, or do a filament change at Z = base_thickness.
 part = "All"; // [All, Base only, Raised only, Logo only, Text and rim only]
 // Preview colors only, they dont change the model
-plate_color = "#2b2b2b";
-detail_color = "#f2f2f2";
+plate_color = "#4B2A7B";
+detail_color = "#ffffff";
 
 /* [Hidden] */
 $fn = 64;

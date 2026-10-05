@@ -1,9 +1,10 @@
-scad-tag - a blank parametric name tag. drop in your own svg.
+glg-nametag - a parametric staff name tag for great lakes gaming.
+forked from scad-tag (https://github.com/skyphose/scad-tag).
 
 Copyright (c) 2026 skyphose
 
-The model, the .scad source, fonts.scad and the scripts are licensed under the
-Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+The model, the .scad source, fonts.scad and the scripts are licensed under the Creative
+Commons Attribution-NonCommercial-ShareAlike 4.0 International License
 (CC BY-NC-SA 4.0).
 
   You may:     share and adapt the model, including printing it for yourself
@@ -15,8 +16,9 @@ Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
 Full license: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 Not covered by this license:
+  - the Great Lakes Gaming name and the GLG logo (glg_logo.svg). They belong
+    to Great Lakes Gaming and are included so the tag works out of the box.
   - the fonts in fonts/ (Comic Neue, Barlow Semi Condensed), which are under
     the SIL Open Font License 1.1 (fonts/OFL-ComicNeue.txt, fonts/OFL-Barlow.txt).
-  - Comic Sans MS, DIN Pro and the other system fonts named in fonts.scad,
-    which are not included. fonts.scad only lists their letter widths.
-  - any logo you add.
+  - DIN Pro and the other system fonts named in fonts.scad, which are not
+    included. fonts.scad only lists their letter widths.
